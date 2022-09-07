@@ -39,7 +39,6 @@ export default () => {
         afterAuthor: <span>钻石黄钻用户</span>,
         align: 'right' as 'left' | 'right',
         actions,
-        content:'哈哈哈我又来了，小飞棍我来了'
     };
     return (
         <div>
