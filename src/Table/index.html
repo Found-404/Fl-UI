@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js分页效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        #conten {
+            width: 400px;
+            height: 410px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        #conten li {
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #ff0000;
+        }
+
+        #btn {
+            width: 180px;
+            height: 30px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul id="conten">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+            <li>32</li>
+            <li>33</li>
+            <li>34</li>
+            <li>35</li>
+            <li>36</li>
+            <li>37</li>
+            <li>38</li>
+            <li>39</li>
+            <li>40</li>
+            <li>41</li>
+            <li>42</li>
+            <li>43</li>
+            <li>44</li>
+            <li>45</li>
+            <li>46</li>
+            <li>47</li>
+            <li>48</li>
+            <li>34</li>
+            <li>35</li>
+            <li>36</li>
+            <li>37</li>
+            <li>38</li>
+            <li>39</li>
+            <li>40</li>
+            <li>41</li>
+            <li>42</li>
+            <li>43</li>
+            <li>44</li>
+            <li>45</li>
+            <li>46</li>
+            <li>47</li>
+            <li>48</li>
+            <li>34</li>
+            <li>35</li>
+            <li>36</li>
+            <li>37</li>
+            <li>38</li>
+            <li>39</li>
+            <li>40</li>
+            <li>41</li>
+            <li>42</li>
+            <li>43</li>
+            <li>44</li>
+            <li>45</li>
+        </ul>
+        <ul id="btn">
+        </ul>
+    </div>
+
+    <script>
+        //总结：分页必须要搞清楚几个参数：1、一共几条数据 2、每页显示几条数据（x）  3、一共几页
+        // 难点：点击第n页时，显示哪几条数据(n-1)*x+1～n*x条数据（n>=1）
+        window.onload = function () {
+            var oConten = document.getElementById("conten");
+            var oLi = oConten.getElementsByTagName("li");
+            var bBtn = document.getElementById("btn");
+
+            var n = 0;//页面数量（重点）
+            // 页面内容控制
+            if (oLi.length % 10 == 0) {//计算页数
+                n = oLi.length / 10 | 0;//Math.floor()
+            } else {
+                n = (oLi.length / 10 | 0) + 1;//Math.ceil()
+            }
+            //添加页码标签（几个页面就添加几个页码）
+            for (var i = 1; i <= n; i++) {
+                cLi = document.createElement("li");
+                cLi.style.cssText = "width:30px; height:30px; background:#ff0000;margin:0 5px;display: inline-block;position:absolute; transition:left 0.5s";
+                cLi.innerHTML = i;
+                bBtn.appendChild(cLi);
+            }
+
+            var aLi = bBtn.getElementsByTagName("li");
+            for (var i = 0; i <= n - 1; i++) {
+                aLi[i].index = i;
+                aLi[0].style.background = "#ccc";
+                aLi[i].style.left = i * 40 + "px";
+                // alert(aLi[i].index)
+
+                //点击页码做3件事
+                aLi[i].onclick = function () {
+                    b = this.index;
+                    // alert(b)
+                    // 1.当前页码active（简单功能）
+                    for (var j = 0; j < aLi.length; j++) {
+                        aLi[j].style.background = "#ff0000";
+                    }
+                    this.style.background = "#ccc";
+                    //2.页码滚动（该功能可有可无）
+                    if (b <= 2) {
+                        for (var j = 0; j < aLi.length; j++) {
+                            aLi[j].style.left = j * 40 + "px";
+                        }
+                    }
+                    if (b > 2 && b < (n - 2)) {
+                        for (var j = 0; j < aLi.length; j++) {
+                            aLi[j].style.left = (j - b + 2) * 40 + "px";
+                        }
+                    }
+                    //3.页面切换
+                    for (var j = 0; j < oLi.length; j++) {//点击第b页，先让 所有页面隐藏
+                        oLi[j].style.display = "none";
+                    }
+                    for (var j = (b * 10); j < (b + 1) * 10; j++) {//再显示第 b * 10条 至 (b + 1) * 10-1条数据(b>=0)（重难点）
+                        oLi[j].style.display = "block";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
