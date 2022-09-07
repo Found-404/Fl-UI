@@ -34,9 +34,7 @@ export default () => {
     </ul>
   );
   const commentData = {
-    author: '李金帅',
     datetime: time,
-    content: '智游最帅非我李金帅莫属',
     align: 'right' as 'left' | 'right',
     actions,
   };

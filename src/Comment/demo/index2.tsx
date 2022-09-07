@@ -17,14 +17,11 @@ export default () => {
   return (
     <div>
       <FlComment
-        author='李金帅'
-        datetime={time}
-        content='智游最帅非我李金帅莫属' {...commentData}>
+        {...commentData}>
           
         <FlComment
           avatar='http://concis.org.cn/images/swiper-img2.webp'
-          author='李四'
-          datetime={time} content='老哥666' {...commentData}>
+          {...commentData}>
           <FlComment 
           avatar='http://concis.org.cn/images/swiper-img3.webp' {...commentData}/>
           <FlComment 
