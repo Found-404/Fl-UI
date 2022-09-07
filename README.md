@@ -2,7 +2,7 @@
 
 ## 教程
 
-1. Fork这个地址的仓库`https://github.com/Found-404/Fl-UI`进入这个网址
+1. Fork这个地址的仓库
 
 ![image-20220907201110292](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220907201110292.png)
 
