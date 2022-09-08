@@ -18,7 +18,7 @@ export const MessageContainer = () => {
   }
 
   // 添加提示框在页面
-  add = (option:List) => {
+  add = (option:List) => {   
     setList((pre:List[])=>{
       const obj = [...pre,option ];
       setTimeout(() => {

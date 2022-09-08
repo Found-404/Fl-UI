@@ -43,6 +43,7 @@
 ![image-20220907215612891](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220907215612891.png)
 
 14. 选择目标远程仓库的分支，以及本地仓库分支，点击**Create pull request**提交Pr
+    - 请选择nav分支
 
 ![image-20220907222633006](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220907222633006.png)
 
