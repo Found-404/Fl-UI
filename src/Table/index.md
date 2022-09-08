@@ -19,7 +19,7 @@ group:
 ```tsx
 import React from 'react';
 import { Table } from 'react-view-design';
-import {columns,defaultData} from './Page/index.tsx'
+import {columns,defaultData} from './Page'
 export default () => <Table titleParams={columns} tableData={defaultData} />;
 ```
 

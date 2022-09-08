@@ -65,6 +65,13 @@
         }
     }
 
+    .concis-select {
+        width: 46px;
+        height: 34px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+    }
+
     .ms-pagination-pages,
     .ms-pagination-go,
     .ms-paginatioin-btn,
@@ -73,7 +80,7 @@
     }
 
     .ms-pagination-go {
-        margin-left: 20px;
+        // margin-left: 20px;
 
         input {
             width: 36px;
