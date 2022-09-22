@@ -1,10 +1,10 @@
 ---
-title: BackTop 回到顶部
+title: BackTop
 nav:
   title: 组件
   path: /common
 group:
-  title: 其他
+  title: 通用
 mobile: false
 ---
 # BackTop 回到顶部

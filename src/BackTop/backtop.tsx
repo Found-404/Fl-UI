@@ -1,6 +1,4 @@
-interface ReactNode{
-    props:any;
-}
+
 
 
 export  interface Props {
@@ -18,13 +16,13 @@ export  interface Props {
 
     /**
      * 需要监听滚动事件的目标元素
-     * @default rollElement
+     * @default Window
     */
-     target?:any;
+     target:any  ;
 
     /**
      * 滚动距离大于该参数时才会显示按钮
-     * @default 400
+     * @default 200
     */
      visibilityHeight?:any;
 
