@@ -10,7 +10,7 @@ export  interface Props {
 
     /**
      * @description 回到顶部所需时间(ms)
-     * @default 450
+     * @default 1000
     */
      duration?: number;
 
