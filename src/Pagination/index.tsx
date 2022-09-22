@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './pagin'
 import './index.scss'
-// 总变化值
+//总变化值
 var targetdom = 0;
-//块值得变化
+//块值的变化
 var count = 5;
 export default function Pagination(props: Props) {
     let {
