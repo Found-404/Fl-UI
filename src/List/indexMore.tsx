@@ -9,13 +9,13 @@ export default function Ilist({text,dataSource,style,defaultShowNum}: Props) {
         // text?'':'',
       ]
       let num = 0;
-        function defaultShowNum1(defaultShowNum){
+        function defaultShowNum1(defaultShowNum: number | undefined){
             
             let length = dataSource!.length;
             if(num>length){
             num = length;
             }
-            num += defaultShowNum
+            num += defaultShowNum!
             return dataSource!.slice(0,num)
         }
     
@@ -55,16 +55,10 @@ export default function Ilist({text,dataSource,style,defaultShowNum}: Props) {
         
     }
 
-    // virtualListProp
     if(style == 'virtualList'){
         data = dataSource!;
     }
-    // function virtualListProps(){
-    //     data = dataSource!;
-    // }
     
-     
-      
     return (
     <div className={props.join(' ')}>
         {
