@@ -1,7 +1,7 @@
 ---
 hero:
-  title: react-view-design
-  desc: react-view-design site example
+  title: FL Design
+  desc: bat测试2.0
   actions:
     - text: Getting Started
       link: /components

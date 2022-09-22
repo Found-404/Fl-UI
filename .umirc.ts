@@ -2,11 +2,11 @@ import { defineConfig } from 'dumi';
 // import style from './docs/siteIndexStyle';
 
 export default defineConfig({
-  title: 'react-view-design', // 你的组件库名字
+  title: 'FL Design', // 你的组件库名字
   // 你的网站 tabs 图片
-  favicon: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/%E7%BD%91%E7%AB%99%E5%A4%B4%E5%83%8F.png',
+  favicon: 'https://mui.com/static/logo.png',
   // 你的官网logo  
-  logo: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/%E7%BD%91%E7%AB%99%E5%A4%B4%E5%83%8F.png',
+  logo: 'https://mui.com/static/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
   apiParser: {
