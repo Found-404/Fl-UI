@@ -1,10 +1,10 @@
 ---
-title: List 列表
+title: List 列表 副本
 nav:
   title: 组件
   path: /common
 group:
-  title: 数据展示
+  title: 通用
 mobile: false
 ---
 ## List列表

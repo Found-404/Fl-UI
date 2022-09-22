@@ -360,6 +360,7 @@ function Treeview(props:treeViewProps) {
     if (myTreeNode === eles.prev) return
 
 
+
     // 被拖拽的元素悬停的地方
     // - 如果是没有子节点的节点，则与之替换
     // - 如果是有字节点的集合节点，则将其放在该节点中，原先的数据删除
@@ -405,8 +406,6 @@ function Treeview(props:treeViewProps) {
           }
         });
       }
-      // console.log(oneObj,'被拖拽的节点');
-      // console.log(twoObj,'悬停节点');
 
       // 更换这两个数据的位置
       // - 使用替换法,拖拽节点父级的对应索引坑位放悬停节点
@@ -416,6 +415,9 @@ function Treeview(props:treeViewProps) {
         newArr.splice(oneObj.index,1,twoObj.tree);
         twoObj.tree.prev.children.splice(twoObj.index,1,oneObj.tree);
       }else{
+        if (twoObj.tree.prev === null) {
+          return
+        }
         oneObj.tree.prev.children.splice(oneObj.index,1,twoObj.tree);
         twoObj.tree.prev.children.splice(twoObj.index,1,oneObj.tree);
       }
