@@ -70,10 +70,10 @@ export default function Pagination(props: Props) {
         if (targetdom === arrtorge.length - 1) {
             arrtorge[arrtorge.length - 1].classList.add("pagination-show")
         } else {
-            targetdom++
-            // 当运动跳跃
-            if (number > 8 && targetdom === 5) {
-                targetdom = 8
+            if (count <= number - 6 && count > 5) {
+                targetdom = 5
+            } else {
+                targetdom++
             }
             arrtorge[targetdom].classList.add("pagination-show")
         }
