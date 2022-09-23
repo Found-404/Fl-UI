@@ -41,7 +41,7 @@ export default defineConfig({
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/yq979292/Fluent-design0',
+      path: 'https://github.com/yq979292',
     },
   ],
   // styles: [style],
