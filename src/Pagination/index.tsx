@@ -3,7 +3,7 @@ import './pagin'
 import './index.scss'
 //总变化值
 var targetdom = 0;
-//块值的变化
+//渲染数值的 中间操作值
 var count = 5;
 export default function Pagination(props: Props) {
     let {
