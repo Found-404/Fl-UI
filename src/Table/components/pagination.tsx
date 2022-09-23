@@ -102,7 +102,7 @@ class Pagination extends Component<any, any>{
     }
     // 上一页
     handlePrevPage = () => {
-        console.log(1);
+        // console.log(1);
 
         const { currentPage } = this.state;
         if (currentPage > 1) {
@@ -160,6 +160,8 @@ class Pagination extends Component<any, any>{
             // 检测前边界值
             viewPageStart = 1;
             viewPageEnd = middlePage + Math.floor(middlePage / 2);
+            console.log(viewPageEnd);
+
         } else if (currentPage >= pageCount - Math.floor(middlePage / 2) - 1) {	// -1 是为了最后一页显示6条分页数据 32..33 是不合理的 应该是 32 33
             // 检测后边界值
             viewPageStart = pageCount - middlePage;
@@ -204,6 +206,11 @@ class Pagination extends Component<any, any>{
                     <ul>
                         {this.renderPages()}
                     </ul>
+                </div>
+                <div className='concis-select' style={{ color: '#325DFF' }}>
+                    <div className="selected ">
+                        <div className="placeholder"></div>
+                        <span role="img" aria-label="down" tabIndex={-1} className="anticon anticon-down" style={{ fontSize: 12 + 'px' }}><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></span></div>
                 </div>
                 {
                     showGo
