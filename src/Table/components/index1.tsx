@@ -20,6 +20,13 @@ export default function index1() {
         }
     }
     //搜索还没写？？？？？？
+    let search = () => {
+        if (ipt.current) {
+            let dom: any = ipt.current
+            dom = dom.querySelector('.input')
+            console.log(dom.value);
+        }
+    }
     return (
         <div>
             <span role="img" aria-label="search" className="anticon anticon-search">
@@ -36,7 +43,7 @@ export default function index1() {
                     <input className="input" type="text" placeholder="请输入"
                         defaultValue="" style={{ width: '70px', color: '#325dff' }} />
                 </div>
-                <div className="search-btn1">
+                <div className="search-btn1" onClick={() => { search() }}>
                     <span role="img" aria-label="search"
                         className="anticon anticon-search1">
                         <svg viewBox="64 64 896 896" focusable="false"

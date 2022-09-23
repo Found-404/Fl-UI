@@ -102,7 +102,7 @@ class Pagination extends Component<any, any>{
     }
     // 上一页
     handlePrevPage = () => {
-        console.log(1);
+        // console.log(1);
 
         const { currentPage } = this.state;
         if (currentPage > 1) {
@@ -160,6 +160,8 @@ class Pagination extends Component<any, any>{
             // 检测前边界值
             viewPageStart = 1;
             viewPageEnd = middlePage + Math.floor(middlePage / 2);
+            console.log(viewPageEnd);
+
         } else if (currentPage >= pageCount - Math.floor(middlePage / 2) - 1) {	// -1 是为了最后一页显示6条分页数据 32..33 是不合理的 应该是 32 33
             // 检测后边界值
             viewPageStart = pageCount - middlePage;
@@ -213,8 +215,6 @@ class Pagination extends Component<any, any>{
                 {
                     showGo
                         ? (
-
-
                             <div className="ms-pagination-go-wrap">
                                 <div className="ms-pagination-go">
                                     跳转到&nbsp;<input ref="msPaginationGoInput" />&nbsp;页
