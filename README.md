@@ -9,11 +9,17 @@
   <p>开发阶段...</p>
   <img src="https://img.shields.io/static/v1?label=React&message=v18.0.0&color=blue&style=flat-square"/>
    <img src="https://img.shields.io/static/v1?label=TypeScript&message=%20&color=blue&style=flat-square"/>
+       <img src="https://img.shields.io/static/v1?label=SCSS&message=%20&color=ff69b4&style=flat-square&logoColor=white&labelColor=ff69b4"/>
 </div>
+
 
 ## 介绍
 
 更多组件...
+
+
+
+
 
 
 
@@ -24,6 +30,8 @@
 
 
 ## 贡献者
+
+感谢各位开发者做出的贡献...(*非全部*)
 
 <a href="https://github.com/Found-404/Fl-UI/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Found-404/Fl-UI" />
