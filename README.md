@@ -40,13 +40,41 @@
 | IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
 
-## 安装
+## 📦 Install
 
-更多组件...
+```bash
+npm install Flunt
+```
 
+```bash
+yarn add Flunt
+```
 
+## 🔨 Usage
 
-## ksndksdkn
+```jsx
+import React from 'react';
+import { BackTop } from 'concis';
+import usePageListener from '../../common_utils/hooks/usePageListener';
+
+export default function BackTopDemo1() {
+  process.env.NODE_ENV === 'production' && usePageListener('Tag');
+
+  return (
+    <>
+      <div>让滚动条飞一会儿</div>
+      <BackTop visibilityHeight={200} />
+    </>
+  );
+}
+```
+
+And import style manually:
+
+```jsx
+import 'antd/dist/flunt.css'; 
+```
+
 
 ## 贡献者
 
