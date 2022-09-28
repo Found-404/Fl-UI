@@ -1,16 +1,10 @@
-<p align="center">
-  <a href="https://ant.design">
-    <img width="200" src="https://nanxiangscholar.github.io/images/avatar.jpg">
-  </a>
-</p>
+![image-20220922130511080](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220922130511080.png)
 
 <h1 align="center"> FL-design</h1>
 
 <div align="center">
   An enterprise-class UI design language and React UI library.
 </div>
-
-![image-20220922130511080](https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/image-20220922130511080.png)
   
 <div align="center">
   <p>开发阶段...</p>
