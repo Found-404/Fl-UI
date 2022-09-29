@@ -1,11 +1,13 @@
 import { defineConfig } from 'dumi';
 // import style from './docs/siteIndexStyle';
 
+const repo = 'Fl-UI'; // 项目名(也就是你的仓库名)
+
 export default defineConfig({
   title: 'FL Design', // 你的组件库名字
   // 你的网站 tabs 图片
   favicon: 'https://mui.com/static/logo.png',
-  // 你的官网logo  
+  // 你的官网logo
   logo: 'https://mui.com/static/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
@@ -49,4 +51,9 @@ export default defineConfig({
     carrier: 'dumi', // 设备状态栏左侧的文本内容
     hd: true,
   },
+  devServer: {
+    port: 2022, // 自定义端口号
+  },
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
 });
