@@ -47,36 +47,7 @@ yarn add Flunt
 
 ## 🔨 Usage
 
-```jsx
-import React from 'react';
-import { BackTop } from 'concis';
-import usePageListener from '../../common_utils/hooks/usePageListener';
-
-export default function BackTopDemo1() {
-  process.env.NODE_ENV === 'production' && usePageListener('Tag');
-
-  return (
-    <>
-      <div>让滚动条飞一会儿</div>
-      <BackTop visibilityHeight={200} />
-    </>
-  );
-}
-```
-
-And import style manually:
-
-```jsx
-import 'antd/dist/flunt.css'; 
-```
-  return (
-    <>
-      <div>让滚动条飞一会儿</div>
-      <BackTop visibilityHeight={200} />
-    </>
-  );
-}
-```
+...
 
 ## 贡献者
 
