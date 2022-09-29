@@ -21,7 +21,7 @@ export  interface Props {
      * 需要监听滚动事件的目标元素
      * @default Window
     */
-     target:any  ;
+     target:HTMLElement | Window | Document  ;
 
     /**
      * 滚动距离大于该参数时才会显示按钮
