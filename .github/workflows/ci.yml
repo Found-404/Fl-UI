@@ -21,7 +21,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 15.x
+          node-version: 16.x
 
       # 打包代码
       - name: Build Project
@@ -34,4 +34,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: build # 打包的内容放到build分支下
-          folder: dist
+          folder: docs-dist
