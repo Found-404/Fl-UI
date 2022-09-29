@@ -11,11 +11,8 @@ mobile: false
 
 ## 合作开发
 
-
-
-
 ## 贡献者(非全部)
 
 <a href="https://github.com/Found-404/Fl-UI/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Found-404/Fl-UI" />
+  <img width="400px" src="https://contrib.rocks/image?repo=Found-404/Fl-UI" />
 </a>
