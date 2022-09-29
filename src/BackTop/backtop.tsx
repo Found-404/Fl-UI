@@ -1,12 +1,15 @@
+import { ReactNode } from 'react';
 
-
+interface ReactNode{
+    a:any;
+}
 
 export  interface Props {
     /**
      * @description 自定义按钮内容
      * @default --
     */
-     children?: any;
+     children?: ReactNode;
 
     /**
      * @description 回到顶部所需时间(ms)
