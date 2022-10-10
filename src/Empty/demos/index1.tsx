@@ -1,10 +1,10 @@
-import React from 'react'
-import Empty from '..';
+import React from 'react';
+import Empty from '../index';
 
 export default () => {
   return (
     <div>
-      <Empty  type='1'/>
+      <Empty test="" text="暂无数据" image="PRESENTED_IMAGE_SIMPLE" />
     </div>
-  )
-}
+  );
+};
