@@ -2,7 +2,7 @@ import React from 'react'
 import './Swiper.scss'
 import { Swiper } from './Swiper'
 
-export default function Demo(props: any): Swiper {
+export default function FlSwiper(props: any): Swiper {
     let { imgList, height, width, deply } = props;
     // 定义ul的位置状态
     const [tranUl, setTranUl] = React.useState(-width);
@@ -27,36 +27,40 @@ export default function Demo(props: any): Swiper {
                 return tran + (-width)
             })
             setTimeout(() => {
-                // console.log("开启阀门");
                 setthrottle(true)
             }, 650)
+
         }
+
     }
 
     // 生命周期监测是否走到最后一张或第一张
     React.useEffect(() => {
-        if (tranUl == -width || tranUl == -width * imgList.length) {
+        if (tranUl == -width || tranUl == -width * imgList.length - 1) {
             setreanBox("all 0.4s ease")
         }
         if (tranUl <= -width * (imgList.length + 1)) {
-            // setreanBox("none")
-
-            setreanBox("none")
-            setTranUl(-width)
-
-
+            let timer = setTimeout(() => {
+                setreanBox("none")
+                setTranUl(-width)
+            }, 400);
+            return () => {
+                clearTimeout(timer)
+            }
         } else if (tranUl == 0) {
-
-            setreanBox("none")
-            setTranUl(-width * imgList.length)
-
-
+            let timer = setTimeout(() => {
+                setreanBox("none")
+                setTranUl(-width * imgList.length)
+            }, 400);
+            return () => {
+                clearTimeout(timer)
+            }
         }
     }, [tranUl])
 
     // 点击左边
     function leftTo() {
-        if (throttle) {
+        if (throttle && tranUl !== 0) {
             setthrottle(false)
             setTranUl((tran) => {
                 return tran - (-width)
@@ -64,6 +68,7 @@ export default function Demo(props: any): Swiper {
             setTimeout(() => {
                 setthrottle(true)
             }, 650)
+
         }
     }
 
@@ -91,29 +96,31 @@ export default function Demo(props: any): Swiper {
 
     return (
         <div
-            style={{ height: height, width: width }}
+            style={{ height: height, width: width, overflow: 'hidden', margin: '0 auto', position: 'relative' }}
             className="rotation"
-
         >
-            <button className="lt" onClick={leftTo}>左边</button>
+            <button className="lt" onClick={leftTo} style={{ position: 'absolute', top: '50%', left: '0', zIndex: '9999' }}>左边</button>
             <ul
-                className="rotationBox"
+                id="rotationBox"
                 style={{
+                    display: 'flex',
                     width: width * (imgList.length + 2),
-                    // transform: `translateX(${tranUl}px)`,
-                    marginLeft: `${tranUl}px`,
+                    height: height,
+                    overflow: 'hidden',
+                    transform: `translateX(${tranUl}px)`,
                     transition: tranBox
                 }}
             >
-                <li><img src={imgList[imgList.length - 1]} alt="-1" /></li>
+                <li style={{ width }}><img src={imgList[imgList.length - 1]} alt="-1" /></li>
                 {
-                    imgList.map((itme: any, index: any) => {
-                        return <li key={index}><img src={itme} alt={index} /></li>
+                    imgList.map((itme: string, index: any) => {
+                        return <li key={index}><img src={itme} alt={index} style={{ width: width, height: height }} /></li>
                     })
                 }
                 <li><img src={imgList[0]} alt={imgList.length + 1} /></li>
             </ul>
-            <button className="rt" onClick={rightTo}>右边</button>
+            <button className="rt" onClick={rightTo} style={{ position: 'absolute', top: '50%', right: '0' }}>右边</button>
         </div>
     )
 }
+
