@@ -6,7 +6,7 @@ export interface Props {
   description?: {} | null | undefined;
 
   /**
-   * 图片样式
+   * 文本内容
    * @default Empty.PRESENTED_IMAGE_DEFAULT
    */
   image?: {} | null | undefined;

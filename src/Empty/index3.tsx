@@ -8,8 +8,8 @@ export default function Empty({ image, imageStyle, type, text }: Props) {
   let props = [
     image ? '3' : '',
     imageStyle ? 'is-disable' : '',
-    type ? 'ant-empty-image' + type : '',
-    text ? 'ant-empty-description' + text : '',
+    type ? 'fl-empty-image' + type : '',
+    text ? 'fl-empty-description' + text : '',
     // src ? 'https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg' + src : ''
   ];
   const imgStyle: React.CSSProperties = {
@@ -21,13 +21,13 @@ export default function Empty({ image, imageStyle, type, text }: Props) {
   return (
     <section className="code-box">
       <div className="code-box-demo">
-        <div className="ant-empty">
-          <div className={'ant-empty-image' + image}>
+        <div className="fl-empty">
+          <div className={'fl-empty-image' + image}>
             <img src="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg" alt="" />
           </div>
 
-          <div className="ant-empty-description">Customize Description</div>
-          <div className="ant-empty-footer">
+          <div className="fl-empty-description">Customize Description</div>
+          <div className="fl-empty-footer">
             <button>Create Now</button>
           </div>
         </div>

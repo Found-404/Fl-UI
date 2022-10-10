@@ -8,7 +8,7 @@ group:
   mobile: false
 ---
 
-## Empty 空状态
+## Empty 组件
 
 <span style="font-size:14px;color:#black;line-height:2">空状态时的展示占位图<span>
 
