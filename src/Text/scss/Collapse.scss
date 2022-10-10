@@ -2,11 +2,6 @@
 @import './config.scss';
 @import './var.scss';
 
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
 // 初始样式
 @include baseName(Collapse){
@@ -17,7 +12,6 @@
     border-radius: $--border-radius;
 }
 ul{
-    width: $--Collapse-ul-width;
     margin: 0 auto;
     margin-top: $--margin-top;
     li p{

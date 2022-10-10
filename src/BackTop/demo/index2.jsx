@@ -6,7 +6,7 @@ export default function index2() {
     const refDom = useRef(null);
     return (
         // 滚动条DOM
-        <div className="fl-root" ref={refDom}>
+        <div className="fl-root" ref={refDom} >
             {/* 内容contentDOM */}
             <div style={{ fontSize: 16, padding: 20 }} className="fl-content">
                 <div style={{ height: 600 }}>
@@ -22,7 +22,7 @@ export default function index2() {
                     </span>
                 </div>
                 {/* 按钮组件 */}
-                <BackTop visibilityHeight={200} target={refDom}>
+                <BackTop visibilityHeight={200} target={refDom} duration={1000}>
                     {/* 传入子标签 */}
                     <svg
                         className="icon"
@@ -39,7 +39,6 @@ export default function index2() {
                     </svg>
                 </BackTop>
             </div>
-
         </div>
     )
 }

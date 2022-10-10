@@ -1,12 +1,14 @@
 import { defineConfig } from 'dumi';
 // import style from './docs/siteIndexStyle';
 
+const repo = 'Fl-UI'; // 项目名(也就是你的仓库名)
+
 export default defineConfig({
-  title: 'react-view-design', // 你的组件库名字
+  title: 'FL Design', // 你的组件库名字
   // 你的网站 tabs 图片
-  favicon: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/%E7%BD%91%E7%AB%99%E5%A4%B4%E5%83%8F.png',
-  // 你的官网logo  
-  logo: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/%E7%BD%91%E7%AB%99%E5%A4%B4%E5%83%8F.png',
+  favicon: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo.png',
+  // 你的官网logo
+  logo: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
   apiParser: {
@@ -41,7 +43,7 @@ export default defineConfig({
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/yq979292/Fluent-design0',
+      path: 'https://github.com/yq979292',
     },
   ],
   // styles: [style],
@@ -49,4 +51,9 @@ export default defineConfig({
     carrier: 'dumi', // 设备状态栏左侧的文本内容
     hd: true,
   },
+  devServer: {
+    port: 2022, // 自定义端口号
+  },
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
 });

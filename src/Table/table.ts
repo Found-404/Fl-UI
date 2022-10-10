@@ -1,153 +1,119 @@
+interface tableThType {
+  title: string | number;
+  dataIndex: string | number;
+  width?: string;
+  sorter?: boolean | Array<Function> | number | string;
+  filter?: boolean | string;
+}
 export interface Props {
   /**
-   * @description 状态类型
+    * @description 类名
+    */
+  className?: string;
+  /**
+   * @description 表头配置项
    * @default []
    */
-  titleParams?: any;
-
+  titleParams: Array<tableThType>;
   /**
-   * 文本内容
+   * @description 表内容配置项
    * @default []
    */
-  tableData?: any;
-
-
+  tableData: Array<any>;
   /**
-   *
-   *表格对齐方式
-   * @type {string}
+   * @description 表格对齐方式
    * @default left
    */
-  align?: string
-
-
+  align?: string;
   /**
-   *
-   * 展开行
-   * @type {Function}
+   * @description 列宽
+   * @default 配置在titleParams中，添加参数，如 width: "400"
+   */
+  width?: string;
+  /**
+   * @description 展开行
    * @default 接受自定义参数，回调函数传入展开行内容
    */
-  expandedRowRender?: any
-
+  expandedRowRender?: Function;
   /**
-    * 支持筛选
-    * @type {boolean}
-    * @default false
-    */
-  filter?: any
-
-
-  /**
-   *
-   *	单选
-   * @type boolean
+   * @description 单选
    * @default false
    */
-  radio?: any
-
+  radio?: boolean;
   /**
-*
-*单选回调
-* @type Function
-* @default --
-*/
-  radioSelectCallback?: any
-
-  /**
-   *
-   *多选
-   * @type boolean
+   * @description 多选
    * @default false
    */
-  checked?: any
-
+  checked?: boolean;
   /**
-*
-*多选回调
-* @type Function
-* @default --
-*/
-  checkedSelectCallback?: any
-
+   * @description 单选回调
+   */
+  radioSelectCallback?: Function;
   /**
-*
-*支持排序
-* @type boolean
-* @default false
-*/
-  avableSort?: false
-
+   * @description 多选回调
+   */
+  checkedSelectCallback?: Function;
   /**
-* 虚拟列表，大数据量的解决方案之一，无法与lazyLoad、pagination并用
-* @type {boolean}
-* @default false
-*/
-  virtualized?: false
-
+   * @description 支持排序
+   * @default false
+   */
+  avableSort?: boolean;
   /**
-   *
-   *懒加载、虚拟列表默认展示数据条数
-   * @type {number}
+   * @description 支持筛选
+   * @default false
+   */
+  filter?: boolean;
+  /**
+   * @description 表头中的排序规则，true采用列默认排序，Array采用自定义排序
+   * @default ''
+   */
+  sorter?: boolean | Array<Function>;
+  /**
+   * @description 虚拟列表，大数据量的解决方案之一，无法与lazyLoad、pagination并用
+   * @default false
+   */
+  virtualized?: boolean;
+  /**
+   * @description 懒加载、虚拟列表默认展示数据条数
    * @default 10
    */
-  largeDateShowNum?: any
-
+  largeDateShowNum?: number;
   /**
-   *
-   * 懒加载，大数据量的解决方案之一，无法与virtualized、pagination并用
-   * @type {boolean}
+   * @description 懒加载，大数据量的解决方案之一，无法与virtualized、pagination并用
    * @default false
    */
-  lazyLoad?: boolean
-
-
+  lazyLoad?: boolean;
   /**
-   *
-   * 分页，大数据量的解决方案之一，无法与virtualized、lazyLoad并用
-   * @type {boolean}
+   * @description 分页，大数据量的解决方案之一，无法与virtualized、lazyLoad并用
    * @default false
    */
-  pagination?: boolean
+  pagination?: boolean;
   /**
-   *
-   * 分页器对齐方式
-   * @type string
+   * @description 分页器对齐方式
    * @default left
    */
-  paginationAlign?: string
-
-
+  paginationAlign?: string;
   /**
-   *
-   * 分页器改变页码回调函数
-   * @type {Function}
-   * @default --
+   * @description 分页器每页展示配置
+   * @default [10, 20, 30, 50]
    */
-  changePNumCallback?: any
-
+  pageSizeOption?: Array<number>;
   /**
-   *
-   * 	分页器改变页码回调函数
-   * @type {Function}
-   * @default --
+   * @description 分页器改变页码回调函数
    */
-  changePSizeCallback?: any
-
-
+  changePNumCallback?: Function;
   /**
-   *
-   * 配置拖拽
-   * @type {boolean}
+   * @description 分页器改变页码回调函数
+   */
+  changePSizeCallback?: Function;
+  /**
+   * @description 配置拖拽
    * @default false
    */
-  dropabled?: boolean
-
-
+  dropabled?: boolean;
   /**
-   *
-   * 拖拽成功回调
-   * @type {Function}
-   * @default --
+   * @description 拖拽成功回调
    */
-  dropCallback?: any
+  dropCallback?: Function;
+
 }

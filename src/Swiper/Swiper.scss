@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.rotation {
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.rotationBox {
+    display: flex;
+    height: 100%;
+    /* transform: translateX(10px); */
+    transition: all 0.4s ease;
+}
+
+.rotationBox li {
+    width: 100%;
+}
+
+.lt,
+.rt {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 0px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lt {
+    left: 0px;
+}
