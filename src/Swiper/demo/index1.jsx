@@ -1,14 +1,18 @@
 import React from 'react'
 import Swiper from '../index'
-
+import logo1 from '../images/swiper-img1.webp'
+import logo2 from '../images/swiper-img2.webp'
+import logo3 from '../images/swiper-img3.webp'
+import logo4 from '../images/swiper-img4.webp'
+import logo5 from '../images/swiper-img5.webp'
 
 export default () => {
     let imgList = [
-        'http://concis.org.cn/images/swiper-img1.webp',
-        'http://concis.org.cn/images/swiper-img2.webp',
-        'http://concis.org.cn/images/swiper-img3.webp',
-        'http://concis.org.cn/images/swiper-img4.webp',
-        'http://concis.org.cn/images/swiper-img5.webp',
+        logo1,
+        logo2,
+        logo3,
+        logo4,
+        logo5,
     ];
 
     return (
