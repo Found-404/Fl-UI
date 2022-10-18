@@ -6,9 +6,9 @@ const repo = 'Fl-UI'; // 项目名(也就是你的仓库名)
 export default defineConfig({
   title: 'FL Design', // 你的组件库名字
   // 你的网站 tabs 图片
-  favicon: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo.png',
+  favicon: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo2.0.png',
   // 你的官网logo
-  logo: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo.png',
+  logo: 'https://found-img-blog.oss-cn-hangzhou.aliyuncs.com/img/logo2.0.png',
   outputPath: 'docs-dist',
   mode: 'site',
   apiParser: {

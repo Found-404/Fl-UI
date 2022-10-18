@@ -1,5 +1,5 @@
 ---
-title: Icon
+title: Icon图标
 nav:
   title: 组件
   path: /common
@@ -16,8 +16,4 @@ Demo:
 
 <code src='./demo/index.jsx'></code>
 
-
-
 <API></API>
-
-
