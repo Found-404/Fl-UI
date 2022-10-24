@@ -3,8 +3,9 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 
     .ms-pagination-pages {
 
@@ -77,6 +78,16 @@
     .ms-paginatioin-btn,
     .ms-pagination-go-wrap {
         display: inline-block;
+    }
+
+    .ms-pagination-go-wrap {
+        margin-right: 5%;
+    }
+
+    .ms-pagination-pages {
+        ul {
+            margin: 0;
+        }
     }
 
     .ms-pagination-go {
