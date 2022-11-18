@@ -1,26 +1,27 @@
-export  interface Props {
-    /**
-     * @description 操作区
-     * @default -
-    */
-     extra: string;
+import { ReactNode } from 'react';
 
-    /**
-     * 结果的状态
-     * @default -
-    */
-    children:any;
+export interface Props {
+  /**
+   * @description 操作区
+   * @default -
+   */
+  extra: Array<ReactNode>;
 
-    /**
-     * title 文字
-     * @default -
-    */
-    title:string;
+  /**
+   * 结果的状态
+   * @default -
+   */
+  children: any;
 
-    /**
-     * subTitle 文字
-     * @default -
-    */
-   subTitle:string;
-    
+  /**
+   * title 文字
+   * @default -
+   */
+  title: string;
+
+  /**
+   * subTitle 文字
+   * @default -
+   */
+  subTitle: string;
 }
