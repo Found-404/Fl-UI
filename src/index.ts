@@ -6,4 +6,6 @@ export { default as Treeview } from './TreeView';
 export { default as Table } from './Table';
 export { default as InputNumber } from './InputNumber';
 export { default as Paginaction } from './Pagination';
-export { default as FlSteps } from './Steps';
+export { default as Steps } from './Steps';
+export { default as Notice } from './Notification';
+export { default as Result } from './Result';
