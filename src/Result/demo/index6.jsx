@@ -1,6 +1,5 @@
 import React from 'react';
-import Result from '../index.tsx';
-import Button from '../../Button/index';
+import { Button, Result } from 'react-view-design';
 
 export default () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import Steps from '..';
+import { Steps } from 'react-view-design';
 
 export default function index1() {
   let data = ['Waiting', 'In Process', 'Finished'];
