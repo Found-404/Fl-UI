@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { nanoid } from 'nanoid';
 
-import Skeleton from '..';
+import { Skeleton } from 'react-view-design';
 
 export default function Loading() {
   let dataSource = [
