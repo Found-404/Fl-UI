@@ -9,3 +9,5 @@ export { default as Paginaction } from './Pagination';
 export { default as Steps } from './Steps';
 export { default as Notice } from './Notification';
 export { default as Result } from './Result';
+export { default as Skeleton } from './Skeleton';
+export { default as Divider } from './Divider';
