@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '..';
+import { Layout } from 'react-view-design';
 let headline = ['nav 1', 'nav 2', 'nav 3', 'nav 4', 'nav 5', 'nav 6', 'nav 7'];
 export default () => {
   return (
