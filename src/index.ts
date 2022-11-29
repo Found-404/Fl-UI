@@ -11,3 +11,4 @@ export { default as Notice } from './Notification';
 export { default as Result } from './Result';
 export { default as Skeleton } from './Skeleton';
 export { default as Divider } from './Divider';
+export { default as Layout } from './Layout';
