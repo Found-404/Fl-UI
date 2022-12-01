@@ -1,5 +1,5 @@
 import React from 'react';
-import Empty from '../index';
+import { Empty } from 'react-view-design';
 
 export default () => {
   return (
