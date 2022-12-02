@@ -1,9 +1,10 @@
-import React from 'react'
-import InputNumber from '..'
-export default ()=> {
+import React from 'react';
+import { InputNumber } from 'react-view-design';
+
+export default () => {
   return (
     <>
-        <InputNumber />
+      <InputNumber />
     </>
-  )
-}
+  );
+};
