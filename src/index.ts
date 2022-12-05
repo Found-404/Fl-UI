@@ -12,3 +12,6 @@ export { default as Result } from './Result';
 export { default as Skeleton } from './Skeleton';
 export { default as Divider } from './Divider';
 export { default as Layout } from './Layout';
+export { default as CheckBox } from './CheckBox';
+export { default as DatePicker } from './DatePicker';
+export { default as Empty } from './Empty';
