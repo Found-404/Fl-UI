@@ -16,3 +16,4 @@ export { default as CheckBox } from './CheckBox';
 export { default as DatePicker } from './DatePicker';
 export { default as Empty } from './Empty';
 export { default as Rate } from './Rate';
+export { default as Select } from './Select';
