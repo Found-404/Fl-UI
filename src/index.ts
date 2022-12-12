@@ -18,3 +18,4 @@ export { default as Empty } from './Empty';
 export { default as Rate } from './Rate';
 export { default as Select } from './Select';
 export { default as Switch } from './Switch';
+export { default as BackTop } from './BackTop';
