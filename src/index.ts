@@ -15,3 +15,7 @@ export { default as Layout } from './Layout';
 export { default as CheckBox } from './CheckBox';
 export { default as DatePicker } from './DatePicker';
 export { default as Empty } from './Empty';
+export { default as Rate } from './Rate';
+export { default as Select } from './Select';
+export { default as Switch } from './Switch';
+export { default as BackTop } from './BackTop';
