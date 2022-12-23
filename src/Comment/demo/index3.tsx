@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import logo1 from '../img/dianzan.png'
-import logo2 from '../img/xingxing.png'
-import logo3 from '../img/dianzan1.png'
-import logo4 from '../img/shoucang.png'
-import FlComment from '..'
+import React, { useState } from 'react';
+import logo1 from '../img/dianzan.png';
+import logo2 from '../img/xingxing.png';
+import logo3 from '../img/dianzan1.png';
+import logo4 from '../img/shoucang.png';
+import { FlComment } from 'react-view-design';
 
 export default () => {
   let date = new Date();
-  let time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+  let time = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
   let [cont, setCont] = useState(false);
   let [star, setStar] = useState(false);
   function changeCont() {
-    cont = !cont
-    setCont(cont)
+    cont = !cont;
+    setCont(cont);
   }
   function changeStar() {
-    star = !star
-    setStar(star)
+    star = !star;
+    setStar(star);
   }
   const actions = (
     <ul>
@@ -40,7 +40,7 @@ export default () => {
   };
   return (
     <div>
-      <FlComment {...commentData}/>
+      <FlComment {...commentData} />
     </div>
-  )
-}
+  );
+};
