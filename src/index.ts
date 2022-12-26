@@ -21,3 +21,4 @@ export { default as Switch } from './Switch';
 export { default as BackTop } from './BackTop';
 export { default as Swiper } from './Swiper';
 export { default as FlComment } from './Comment';
+export { default as Collapse } from './Text';
