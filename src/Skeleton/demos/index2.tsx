@@ -1,13 +1,10 @@
-import React, { useState,useEffect } from "react";
-import Skeleton from '..'
+import React, { useState, useEffect } from 'react';
+import { Skeleton } from 'react-view-design';
 
 export default function Loading() {
-
-  return(
+  return (
     <>
       <Skeleton title></Skeleton>
     </>
-  )
+  );
 }
-
-

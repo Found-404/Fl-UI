@@ -1,6 +1,23 @@
+export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
-export { default as Message} from './Message';
-export {default as Icon} from './Icon'
-export {default as Treeview} from './TreeView'
-export {default as Table} from './Table'
-export {default as InputNumber} from './InputNumber'
+export { default as Message } from './Message';
+export { default as Icon } from './Icon';
+export { default as Treeview } from './TreeView';
+export { default as Table } from './Table';
+export { default as InputNumber } from './InputNumber';
+export { default as Paginaction } from './Pagination';
+export { default as Steps } from './Steps';
+export { default as Notice } from './Notification';
+export { default as Result } from './Result';
+export { default as Skeleton } from './Skeleton';
+export { default as Divider } from './Divider';
+export { default as Layout } from './Layout';
+export { default as CheckBox } from './CheckBox';
+export { default as DatePicker } from './DatePicker';
+export { default as Empty } from './Empty';
+export { default as Rate } from './Rate';
+export { default as Select } from './Select';
+export { default as Switch } from './Switch';
+export { default as BackTop } from './BackTop';
+export { default as Swiper } from './Swiper';
+export { default as FlComment } from './Comment';
