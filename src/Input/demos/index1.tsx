@@ -1,26 +1,14 @@
 import React from 'react';
-import InputPro from '..';
-
+import Input from '..';
 
 export default function InputProDemo1() {
-  let option = [
-    {
-      label: 'JavaScript',
-    },
-    {
-      label: 'TypeScript',
-    },
-    {
-      label: 'VueJS',
-    },
-    {
-      label: 'ReactJS',
-    },
-  ];
-  return (<div>
-
-    <InputPro align="right" option={option} />
-  </div>
-
+  return (
+    <div style={{ width: '30%' }}>
+      <Input defaultValue={55} />
+      <br />
+      <Input defaultValue={55} />
+      <br />
+      <Input defaultValue={55} />
+    </div>
   );
 }

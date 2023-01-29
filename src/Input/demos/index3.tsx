@@ -1,22 +1,14 @@
 import React from 'react';
-import InputPro from '..';
+import Input from '..';
 
 export default function InputProDemo1() {
-  const option = [
-    {
-      label: 'JavaScript',
-      disabled: true,
-    },
-    {
-      label: 'TypeScript',
-      disabled: true,
-    },
-    {
-      label: 'VueJS',
-    },
-    {
-      label: 'ReactJS',
-    },
-  ];
-  return <InputPro  option={option} />;
+  return (
+    <div style={{ width: '30%' }}>
+      <Input prefix="￥" suffix="RMB" placeholder="15155" />
+      <br />
+      <Input prefix="$" suffix="$" />
+      <br />
+      <Input prefix="email" suffix="@qq.com" />
+    </div>
+  );
 }

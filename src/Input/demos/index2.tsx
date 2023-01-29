@@ -1,29 +1,14 @@
 import React from 'react';
-import InputPro from '..';
-
+import Input from '..';
 
 export default function InputProDemo1() {
-  let option = [
-    {
-      label: 'JavaScript',
-    },
-    {
-      label: 'TypeScript',
-    },
-    {
-      label: 'VueJS',
-    },
-    {
-      label: 'ReactJS',
-    },
-  ];
-  return (<div>
+  const onChange = (e) => {
+    console.log(e);
+  };
 
-    <InputPro align="top" option={option} />
-    <InputPro align="bottom" option={option} />
-    <InputPro align="left" option={option} />
-    <InputPro align="right" option={option} />
-  </div>
-
+  return (
+    <div>
+      <Input disabled onChange={onChange} />
+    </div>
   );
 }

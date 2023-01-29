@@ -47,7 +47,7 @@ export default function InputNumber({
     <div className="fl-input-number">
       <div className={flInputNumberClassName.join(' ')}>
         <span
-          className="fl-inputNumber-up ant-inputNumber-handler"
+          className="fl-inputNumber-up fl-inputNumber-handler"
           onClick={!disabled && Decrease}
           style={ltbool ? { cursor: 'pointer' } : { cursor: 'not-allowed', color: '#ccc' }}
         >
@@ -62,7 +62,7 @@ export default function InputNumber({
           onChange={(event) => inputChange(event.target.value)}
         />
         <span
-          className="fl-inputNumber-down ant-inputNumber-handler"
+          className="fl-inputNumber-down fl-inputNumber-handler"
           onClick={!disabled && Increase}
           style={rtbool ? { cursor: 'pointer' } : { cursor: 'not-allowed', color: '#ccc' }}
         >
