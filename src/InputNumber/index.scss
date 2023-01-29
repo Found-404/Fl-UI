@@ -1,61 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    
-}
-tbody{
-    text-align: center;
-}
-.fl-inputNumber {
-    width: 180px;
-    height: 40px;
-    display: inline-block;
-    position: relative;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+.fl-input-number {
 
-    input {
-        width: 174px;
-        height: 38px;
-        padding: 0 50px;
-        outline: none;
+    .fl-inputNumber {
+        width: 150px;
+        height: 35px;
+        border: 1px solid #ccc;
         border-radius: 5px;
-        text-align: center;
-        border: none;
+
+        &:hover {
+            border: 1px solid #409eff;
+        }
+
+        .ant-inputNumber-handler:hover {
+            cursor: pointer;
+            color: #409eff;
+        }
+
+        .ant-inputNumber-handler {
+            display: inline-block;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            padding: 4% 0;
+            user-select:none;
+        }
+
+        .fl-inputNumber-up {
+            border-radius: 4px 0 0 4px;
+            border-right: 1px solid #dcdfe6;
+        }
+
+        .fl-inputNumber-input {
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            margin: 0;
+            border: none;
+            outline: none;
+            text-align: center;
+            padding: 0 4%;
+            vertical-align: bottom;
+        }
+
+        .fl-inputNumber-down {
+            border-radius: 0 4px 4px 0;
+            border-left: 1px solid #dcdfe6;
+        }
+
 
     }
 
-    span {
-        display: inline-block;
-        width: 40px;
-        height: 37px;
-        position: absolute;
-        top: 1px;
-        text-align: center;
-        line-height: 35px;
-        font-size: 22px;
-        font-weight: 100;
-        background-color: rgb(245,247,250);
-        user-select:none;
+    .fl-inputNumber-lg {
+        width: 180px;
+        height: 40px;
     }
-    &:hover{
-       
-        border: 1px solid #409eff;
-    }
-    span:hover {
-        color: #409eff;
-    }
-}
 
-.fl-input-decrease {
-    left: 1px;
-    border-radius: 4px 0 0 4px;
-    border-right: 1px solid #dcdfe6;
-}
+    .fl-inputNumber-sm {
+        width: 100px;
+        height: 30px;
+    }
 
-.fl-input-increase {
-    right: 1px;
-    border-radius:0 4px 4px 0;
-    border-left: 1px solid #dcdfe6;
+    .fl-disabled {
+        background-color: #f5f5f5;
+        cursor: not-allowed !important;
+
+        &:hover {
+            border: 1px solid #ccc;
+        }
+
+        .fl-inputNumber-input {
+            cursor: not-allowed !important;
+        }
+
+        .ant-inputNumber-handler:hover {
+            cursor: not-allowed !important;
+            color: #000;
+        }
+    }
 }

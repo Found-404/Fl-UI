@@ -8,15 +8,19 @@ group:
   mobile: false
 ---
 
-## InputNumber 组件
+# InputNumber 组件
 
-<span style="font-size:12px;color:#ccc">常规组件</span>
+##### 通过鼠标或键盘，输入范围内的数值。
+
+### 何时使用
+
+##### 当需要获取标准数值时。
 
 ### 基本用法
 
 <code src="./demos/index1.jsx"></code>
 
-### 是否可输入
+### 禁用
 
 <code src="./demos/index2.jsx"></code>
 
@@ -31,5 +35,9 @@ group:
 ### 数值精度
 
 <code src="./demos/index5.jsx"></code>
+
+### 三种大小 large|samll
+
+<code src="./demos/index6.jsx"></code>
 
 <API></API>

@@ -1,66 +1,74 @@
-import React, { useRef, useState } from 'react'
-import './index.scss'
-import { Props } from './inputnumber'
+import React, { useRef, useState, useEffect, useLayoutEffect } from 'react';
+import './index.scss';
+import { Props } from './inputnumber';
 
-export default function InputNumber({ isabled, min, max, step, precision,numb }: Props) {
-  isabled = isabled ? isabled : false
-  min = min ? min : -1000;
-  max = max ? max : 1000;
-  step = step ? step : 1
-  
+export default function InputNumber({
+  disabled,
+  min,
+  max,
+  step = 1,
+  precision = 0,
+  defaultValue,
+  size,
+  onChange,
+}: Props) {
+  const flInputNumberClassName = [
+    'fl-inputNumber',
+    disabled ? 'fl-disabled' : '',
+    size === 'small' ? 'fl-inputNumber-sm' : '',
+    size === 'large' ? 'fl-inputNumber-lg' : '',
+  ];
   const val = useRef(null);
-  const [num, setNum] = useState(numb?numb:1)
- 
-  
-  const [ltbool, setltBool] = useState(true)
-  const [rtbool, setrtBool] = useState(true)
+  const [value, setValue] = useState(defaultValue ? defaultValue : '');
+  const [ltbool, setltBool] = useState(true);
+  const [rtbool, setrtBool] = useState(true);
 
-  function Decrease() {
+  const Decrease = () => {
+    const Num = val.current.value * 1;
+    if (Num <= min) return;
+    setValue(Number((Num - step).toFixed(precision)));
+  };
+  const Increase = () => {
+    const Num = val.current.value * 1;
+    if (Num >= max) return;
+    setValue(Number((Num + step).toFixed(precision)));
+  };
 
-    let reduce =  Number((Number(val.current.value) - step).toFixed(precision));
-    if (reduce >= min) {
-      setNum(reduce)
-    }
-    if (reduce >= max) {
-      setNum(max)
-    }
-    if (reduce <= min) {
-      setNum(min)
-      setltBool(false)
-    }else{
-      setltBool(true)
-      setrtBool(true)
-    }
+  const inputChange = (tarVal: string) => {
+    setValue(Number(tarVal));
+  };
 
-  }
-  function Increase() {
-    let add = Number((Number(val.current.value) + step).toFixed(precision));
-
-    if (add <= max) {
-      setNum(add)
-    }
-    if(add<=min){
-      setNum(min)
-    }
-    if(add>=max){
-      setNum(max)
-      setrtBool(false)
-    }else{
-
-      setltBool(true)
-      setrtBool(true)
-    }
-   
-  }
-  function inputChange(tarVal: string) {
-    setNum(Number(tarVal))
-
-  }
+  useEffect(() => {
+    value <= min ? setltBool(false) : setltBool(true);
+    value >= max ? setrtBool(false) : setrtBool(true);
+    onChange && value && onChange();
+  }, [value]);
   return (
-    <div className="fl-inputNumber">
-      <span className='fl-input-decrease' onClick={Decrease} style={ltbool?{cursor:'pointer'}:{cursor:'not-allowed'}}>-</span>
-      <input type="text" value={num} ref={val} onChange={(event) => inputChange(event.target.value)} disabled={isabled}></input>
-      <span className='fl-input-increase' onClick={Increase} style={rtbool?{cursor:'pointer'}:{cursor:'not-allowed'}}>+</span>
+    <div className="fl-input-number">
+      <div className={flInputNumberClassName.join(' ')}>
+        <span
+          className="fl-inputNumber-up ant-inputNumber-handler"
+          onClick={!disabled && Decrease}
+          style={ltbool ? { cursor: 'pointer' } : { cursor: 'not-allowed', color: '#ccc' }}
+        >
+          -
+        </span>
+        <input
+          type="text"
+          className="fl-inputNumber-input"
+          value={`${value}`}
+          ref={val}
+          disabled={disabled}
+          onChange={(event) => inputChange(event.target.value)}
+        />
+        <span
+          className="fl-inputNumber-down ant-inputNumber-handler"
+          onClick={!disabled && Increase}
+          style={rtbool ? { cursor: 'pointer' } : { cursor: 'not-allowed', color: '#ccc' }}
+        >
+          +
+        </span>
+      </div>
     </div>
-  )
+  );
 }

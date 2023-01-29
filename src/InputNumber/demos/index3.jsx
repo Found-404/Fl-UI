@@ -1,9 +1,9 @@
-import React from 'react'
-import InputNumber from '..'
-export default ()=> {
+import React from 'react';
+import InputNumber from '..';
+export default () => {
   return (
     <>
-        <InputNumber min={10} max={20}/>
+      <InputNumber min={10} max={20} defaultValue={10} />
     </>
-  )
-}
+  );
+};
