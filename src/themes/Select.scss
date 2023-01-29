@@ -15,14 +15,24 @@
             cursor: pointer;
             padding: 6px 15px 6px;
             outline: none;
-            border: 1px solid #ccc;
             font-size: 14px;
             color: #515151;
             position: relative;
+            background-color: #fff;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
         }
-        .fl-select-input-show{
+        .fl-select-input:focus{
+            border: 1px solid #1890ff;
+        }
+        .fl-select-input:hover{
+            border: 1px solid #1890ff;
+        }
+
+        .fl-select-input-show {
             cursor: not-allowed;
         }
+
         .fl-select-img {
             width: 12px;
             height: 30px;
@@ -30,10 +40,12 @@
             left: 88%;
             z-index: 1;
         }
-        .is-disable{
+
+        .is-disable {
             cursor: not-allowed;
         }
-        .is-loading{
+
+        .is-loading {
             cursor: not-allowed;
             background-image: url('../Select/img/loading.svg');
             background-size: 12px;
@@ -42,7 +54,7 @@
         }
     }
 
-    
+
     .neimu {
         width: 100vw;
         height: 100vh;
@@ -64,19 +76,18 @@
         .fl-select-option {
             padding: 6px 8px;
             font-size: 14px;
-            color: rgb(152, 151, 151);
 
             &:hover {
-                color: #325DFF;
-                font-weight: 500;
+               background-color: #d9d9d9;
             }
 
         }
-        .is-disable{
-            background-color: #a4a0a0b5;
-            &:hover{
-                color: rgb(152, 151, 151);
-                font-weight: 400;
+
+        .is-disable {
+            background-color: #f5f5f5;
+
+            &:hover {
+                background-color: #f5f5f5;
                 cursor: not-allowed;
             }
         }

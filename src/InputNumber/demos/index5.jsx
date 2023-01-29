@@ -1,9 +1,9 @@
 import React from 'react';
-import { InputNumber } from 'react-view-design';
+import InputNumber from '..';
 export default () => {
   return (
     <>
-      <InputNumber numb={0.01} precision={2} step={0.2} />
+      <InputNumber defaultValue={0.01} precision={2} step={0.2} />
     </>
   );
 };

@@ -1,10 +1,9 @@
 import React from 'react';
-import { InputNumber } from 'react-view-design';
-
+import InputNumber from '..';
 export default () => {
   return (
     <>
-      <InputNumber />
+      <InputNumber defaultValue={3} />
     </>
   );
 };
